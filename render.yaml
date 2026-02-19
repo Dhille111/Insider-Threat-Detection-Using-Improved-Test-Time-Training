@@ -1,7 +1,7 @@
 services:
   - type: web
     name: insider-threat-detection
-    runtime: python-3.12.0
+    runtime: python-3.12
     plan: free
     buildCommand: "pip install -r requirements.txt && python -m src.train --epochs 3 --out artifacts/model.joblib"
     startCommand: "python -m uvicorn src.serve:app --host 0.0.0.0 --port 8000"

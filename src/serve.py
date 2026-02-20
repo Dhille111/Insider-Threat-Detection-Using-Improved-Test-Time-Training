@@ -3,8 +3,8 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import numpy as np
 import joblib
-from insider_detection.model import load_model, ThreatModel
-from insider_detection.ttt import adapt_entropy_minimization
+from .insider_detection.model import load_model, ThreatModel
+from .insider_detection.ttt import adapt_entropy_minimization
 
 app = FastAPI(title="Insider Threat Detection (demo)")
 

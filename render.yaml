@@ -3,7 +3,7 @@ services:
     name: insider-threat-detection
     runtime: python-3.12
     plan: free
-    buildCommand: "pip install -r requirements.txt && PYTHONPATH=. python -m src.train --epochs 3 --out artifacts/model.joblib"
+    buildCommand: "pip install -r requirements.txt && PYTHONPATH=src python -m src.train --epochs 3 --out artifacts/model.joblib"
     envVars:
       - key: PYTHONPATH
-        value: .
+        value: src
